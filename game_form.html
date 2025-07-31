@@ -1,0 +1,58 @@
+<!-- this tag tells the browser that this is an HTML5 webpage -->
+<!DOCTYPE html>
+<!-- html is a required tag on each html page; lang=en is optional-->
+<html lang="en">
+    <!-- head seaction is where the info for the browers and search engine go-->
+<head>
+    <!-- tells the browser about what characters say appear on the site; UFT-8 is-->
+    <!-- basically everything-->
+  <meta charset="UTF-8" />
+  <!-- Set the viewport to ensure mobile responsiveness -->
+   <!-- leave this meta tag as is so that the site will display ok on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <!-- Title of the webpage -->
+  <title>Game Setup</title>
+  <!-- Links the external CSS stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<!-- The <body> section contains everything that will be visible on the webpage -->
+<body>
+  <h1>Game Login Portal</h1>
+  <h3>Enter Player Info:</h3>
+
+  <!-- The form starts here. When the user submits the form, it runs the processPlayerInfo() function -->
+   <!-- event.preventDefault() stops the page from refreshing when the form is submitted -->
+  <form onsubmit="event.preventDefault(); processPlayerInfo();">
+
+    <!-- Player username -->
+    <label for="txtName">Player Username:</label>
+    <input type="text" id="txtName" placeholder="Enter your gamer tag" />
+
+    <!-- Player weapon -->
+    <label for="txtWeapon">Weapons:</label>
+    <input type="text" id="txtWeapon" placeholder="e.g. invisibility, laser" />
+
+    <!-- Player health -->
+    <label for="txtHealth">Health:</label>
+    <input type="text" id="txtHealth" placeholder="e.g. 50" />
+
+    <!-- Player damage -->
+    <label for="txtDamage">Damage:</label>
+    <input type="text" id="txtDamage" placeholder="e.g. 25" />
+
+    <!-- Player score -->
+    <label for="txtPoints">Points Total:</label>
+    <input type="text" id="txtPoints" placeholder="e.g. 100" />
+
+    <button type="submit">Start Game</button>
+  </form>
+
+  <!-- Output Area -->
+  <div id="divOutput">
+    <div id="divPlayerInfo"></div>
+  </div>
+
+  <!-- This links the external JavaScript file game_info.js -->
+  <script src="game_info.js"></script>
+</body>
+</html>
